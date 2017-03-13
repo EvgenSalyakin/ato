@@ -1,0 +1,77 @@
+/**==========================================================================*/
+/*Header style */
+/**==========================================================================*/
+
+header.wrap {
+    height: 150px;
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 70%;
+    border-top: 2px dotted #6dcec1;
+    border-left: 3px dotted #6dcec1;
+    border-bottom: 3px dotted #6dcec1;
+    background: #156f63;
+    background: -webkit-repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );
+    background: -o-repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );
+    background: -moz-repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );
+    background: repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );}
+
+.header-wrap{
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.user-info {
+    position: absolute;
+    width: auto;
+    min-width: 120px;
+    bottom: 0;
+    right: 0;
+    padding: 15px 10px 5px 10px;
+    text-align: right;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.81);
+    font-family: serif;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 70%;
+    border-top: 2px dotted #6dcec1;
+    border-left: 3px dotted #6dcec1;
+    background: #156f63;
+    background: -webkit-repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );
+    background: -o-repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );
+    background: -moz-repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );
+    background: repeating-linear-gradient( 40deg, rgba(5, 78, 69, 0.8), rgba(22, 99, 89, 0.9) 3px, #0b6156 5px, rgba(4, 86, 75, 0.7) 5px );
+}
+
+.user-info:hover,
+.user-info:focus {
+    color: #00e5ff;
+}
+
+
+.page header h2 .fa {
+    margin-right: 5px;
+}
+
+.page header h2 {
+    position: fixed;
+    top: 90px;
+    left: 170px;
+    font-size: 26px;
+    z-index: 10000;
+    color: #ffffff;
+    text-shadow: 1px 2px 4px rgba(0, 229, 255, 0.46);
+}

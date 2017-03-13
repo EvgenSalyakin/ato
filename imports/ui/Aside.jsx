@@ -8,7 +8,7 @@ export default class Aside extends Component {
                 <aside className="panel1 nav">
                     <ul className="navigation">
                         <li>
-                            <a href="/home">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li>
                             <a href="/catalog">Catalog</a>
