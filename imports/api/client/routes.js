@@ -3,7 +3,7 @@ import {FlowRouter} from 'meteor/kadira:flow-router';
 import {mount} from 'react-mounter';
 
 //  Layouts
-import App from '../../ui/layouts/App';
+import App from '../../ui/App';
 
 //  Pages
 import PageNotFound from '../../ui/pages/PageNotFound';
