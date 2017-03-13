@@ -11,7 +11,6 @@ export default class Header extends Component {
                     <div className="user-info">
                         <h4>Welcome</h4>
                         <h4>Admin</h4>
-                        <Alert> No info yet</Alert>
                     </div>
                 </div>
             </header>

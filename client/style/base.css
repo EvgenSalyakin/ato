@@ -8,82 +8,24 @@ body {
 
 html, body, .wrapper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .wrapper {
     overflow: hidden;
+    background: #f8fcfd;
 }
 
 .wrapper > div.app {
     margin: 160px 10px 0 150px;
     padding: 5px 10px;
     width: auto;
+    height: 100%;
 }
 
 .page. {
     height: 100vh;
 }
-
-/*.wrapper {*/
-    /**/
-/*}*/
-
-/*.ngViewport.ng-scope{*/
-    /*height: auto !important;*/
-    /*overflow-y: hidden;*/
-/*}*/
-
-/*.ngTopPanel.ng-scope, .ngHeaderContainer{*/
-    /*width: auto !important;*/
-/*}*/
-/*.ngGrid{*/
-    /*background-color: transparent!important;*/
-/*}*/
-/*.ag-root {*/
-    /*min-height: 100% !important;*/
-/*}*/
-/*.ag-body {*/
-    /*position: inherit;*/
-    /*height: 100% !important;*/
-/*}*/
-/*.ag-cell {*/
-    /*border: none;*/
-/*}*/
-/*.ag-body-container{*/
-    /*min-height: 82px;*/
-/*}*/
-
-
-/*#react-root {*/
-    /*height: 100%*/
-/*}*/
-
-/*#react-root > .wrapper {*/
-    /*min-height: 100% !important;*/
-/*}*/
-
-/*#react-root {*/
-    /*height: 100%*/
-/*}*/
-
-/*#react-root > .wrapper {*/
-    /*min-height: 100% !important;*/
-/*}*/
-
-/*.app {*/
-    /*height: 100%;*/
-/*}*/
-
-/*.page.home .ag-root.ag-font-style.ag-scrolls {*/
-    /*!*width: 300px !important;*!*/
-    /*!*overflow-y: scroll;*!*/
-    /*!*overflow-x: hidden;*!*/
-/*}*/
-
-/*.ag-material {*/
-    /*height: calc(100% - 175px) !important;*/
-/*}*/
 
 .entry-form{
     padding-top: 100px;
