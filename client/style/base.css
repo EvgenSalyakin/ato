@@ -17,7 +17,7 @@ html, body, .wrapper {
 }
 
 .wrapper > div.app {
-    margin: 160px 10px 0 150px;
+    margin: 250px 10px 0 50px;
     padding: 5px 10px;
     width: auto;
     height: 100%;
@@ -121,7 +121,8 @@ a:focus {
     background-color: #7ff6eb;
 }
 
-.page .btn {
+.page .btn,
+.landing-page .btn {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18),
     inset 0 1px rgba(255, 255, 255, 0.69),
     inset 0 10px rgba(255, 255, 255, 0.26),
@@ -139,7 +140,8 @@ a:focus {
     inset 0 -15px 30px rgba(0, 0, 0, 0.18);
 }
 
-.page .btn .fa {
+.page .btn .fa,
+.landing-page .btn .fa {
     margin: 0 5px 0 0;
 }
 

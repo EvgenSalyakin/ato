@@ -5,11 +5,11 @@
 .sidebar-container {
     height: auto;
     position: fixed;
-    top: 150px;
+    top: 50px;
     left: 0;
     bottom: 0;
     z-index: 1010;
-    width: 140px;
+    width: 250px;
     box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
     border-top-right-radius: 50%;
     /*border-top: 2px dotted #6dcec1;*/
