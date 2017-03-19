@@ -9,8 +9,7 @@ export default class Header extends Component {
             <header className="wrap">
                 <div className="header-wrap">
                     <div className="user-info">
-                        <h4>Welcome</h4>
-                        <h4>Admin</h4>
+                        <h4>Welcome Admin</h4>
                     </div>
                 </div>
             </header>

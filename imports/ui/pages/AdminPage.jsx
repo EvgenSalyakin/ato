@@ -1,13 +1,13 @@
 import React from 'react';
 import { Well, ButtonToolbar, Button, DropdownButton, MenuItem } from 'react-bootstrap'
 
-export default class HomePage extends React.Component {
+export default class AdminPage extends React.Component {
 
     render() {
         return (
-            <div className="page home">
+            <div className="page admin">
                 <header>
-                    <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Home</h2>
+                    <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Admin</h2>
                 </header>
                 <Well>
                     Hello world!
