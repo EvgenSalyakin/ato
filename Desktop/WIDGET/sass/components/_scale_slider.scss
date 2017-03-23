@@ -1,0 +1,121 @@
+
+.scale-wrapper {
+    margin-top: 10px;
+    .default-wrap {
+        position: relative;
+        height: 190px;
+        width: 25px;
+        margin: 10px auto 0 auto;
+        padding: 70px 0 30px 0;
+        border-radius: 8px;
+        &.slide-wrap {
+            padding: 0 0 9px 0;
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 32px;
+            position: absolute;
+            bottom: 0;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 70px;
+            position: absolute;
+            top: 0;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+    }
+    .list-scale-wrap {
+        max-width: 400px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        @extend %flex;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        .day {
+            text-align: center;
+        }
+        .scale-item {
+            box-sizing: border-box;
+            width: 11.2%;
+        }
+
+    }
+}
+
+// ====== Converted styles to sliders ====== //
+
+.default-slider {
+    width: 25px;
+    height: 80px;
+    border: none;
+    background: none;
+    a:focus {
+        outline: none;
+    }
+    .ui-slider-handle {
+        left: 0 !important;
+    }
+    .ui-state-default {
+        width: 25px;
+        height: 9px;
+        left: 0;
+        cursor: pointer;
+        border: none;
+        background: linear-gradient(#00C6FF, #0072ff);
+        box-shadow: inset 0 -2px -5px $main_color;
+    }
+    .ui-state-active {
+        background: linear-gradient(#00C6FF, #0072ff);
+        box-shadow: inset 0 0 2px $main_color;
+    }
+    .ui-state-hover {
+        background: linear-gradient(#00C6FF, #0072ff);
+        box-shadow: inset 0 -1 3px $main_color;
+    }
+}
+
+.slider {
+    height: 100%;
+}
+
+.default-slider {
+    display: none;
+    &.mon {
+        display: block;
+    }
+    &.tue {
+        display: block;
+    }
+    &.wed {
+        display: block;
+    }
+    &.thu {
+        display: block;
+    }
+    &.fr {
+        display: block;
+    }
+    &.sat {
+        display: block;
+    }
+    &.sun {
+        display: block;
+    }
+}

@@ -1,0 +1,32 @@
+.item-week {
+    text-align: center;
+}
+.custom-navigation {
+    position: relative;
+    z-index: 3;
+    .flex-prev, .flex-next, .flex-prev-block {
+        display: inline-block;
+        position: absolute;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .flex-next {
+        background: url('../images/arrow-right.png') no-repeat;
+        right: 35px;
+    }
+    .flex-prev {
+        background: url('../images/arrow-left.png') no-repeat;
+        left: 40px;
+        display: block;
+    }
+    .flex-prev-block {
+        background: url('../images/arrow-left.png') no-repeat;
+        left: 40px;
+        display: none;
+        cursor: pointer;
+    }
+}
