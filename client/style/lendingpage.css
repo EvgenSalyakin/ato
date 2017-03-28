@@ -1,5 +1,10 @@
+.about_program,
+.section-plus{
+    padding: 50px 0 30px;
+}
 
-.section-title {
+/*Sction title*/
+.section_title {
     margin-top: 0;
     margin-bottom: 70px;
     text-align: center;
@@ -7,4 +12,51 @@
     font-weight: 700;
     line-height: 76px;
     color: #000;
+}
+
+/*Section about program*/
+
+.about_title{
+    margin-bottom: 40px;
+}
+
+.about_program_description {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align:center;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+    color:#3a3a3a;
+}
+
+/*Section plus*/
+.item_plus {
+    text-align: center;
+}
+
+.item_plus > img {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+img.marg-img {
+    margin-top: 29px;
+}
+
+.item_plus_title {
+    margin-top: 0;
+    margin-bottom: 38px;
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.item_plus_description {
+    max-width: 360px;
+    display: inline-block;
+    color: #3a3a3a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 36px;
 }
