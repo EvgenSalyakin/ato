@@ -1,5 +1,19 @@
 import React from 'react';
-import { Well, ButtonToolbar, Button, DropdownButton, MenuItem, Grid, Row, Col, Thumbnail, Form, FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
+import {
+    Well,
+    ButtonToolbar,
+    Button,
+    DropdownButton,
+    MenuItem,
+    Grid,
+    Row,
+    Col,
+    Thumbnail,
+    Form,
+    FormGroup,
+    FormControl,
+    ControlLabel
+} from 'react-bootstrap'
 
 export default class LandingPage extends React.Component {
 
@@ -15,13 +29,13 @@ export default class LandingPage extends React.Component {
                         <FormGroup controlId="formInlineName">
                             <ControlLabel>Name</ControlLabel>
                             {' '}
-                            <FormControl type="text" placeholder="Jane Doe" />
+                            <FormControl type="text" placeholder="Jane Doe"/>
                         </FormGroup>
                         {' '}
                         <FormGroup controlId="formInlineEmail">
                             <ControlLabel>Email</ControlLabel>
                             {' '}
-                            <FormControl type="email" placeholder="jane.doe@example.com" />
+                            <FormControl type="email" placeholder="jane.doe@example.com"/>
                         </FormGroup>
                         {' '}
                         <Button type="submit">
@@ -51,44 +65,70 @@ export default class LandingPage extends React.Component {
                             <MenuItem eventKey="1">Action</MenuItem>
                             <MenuItem eventKey="2">Another action</MenuItem>
                             <MenuItem eventKey="3" active>Active Item</MenuItem>
-                            <MenuItem divider />
+                            <MenuItem divider/>
                             <MenuItem eventKey="4">Separated link</MenuItem>
                         </DropdownButton>
 
                     </ButtonToolbar>
                 </Well>
-
+                <section className="about_program">
+                    <div>
+                        <h3 className="section_title about_title">
+                            Про програму
+                        </h3>
+                        <div className="about_program_description">
+                            Соціальна програма — комплекс узгоджених заходів за цілями, строками, ресурсами та
+                            виконавцями
+                            у масштабах визначеної території та галузі соціальної сфери, що спрямовані на вирішення
+                            комплексу
+                            соціальних проблем.
+                            Як правило, соціальний та соціально-економічний ефект соціальних програм виражається в
+                            підвищенні
+                            якості життя громадян і суспільства в цілому.
+                        </div>
+                    </div>
+                </section>
                 <section className="section-plus">
                     <div className="wrap">
-                        <h3 className="section-title">
+                        <h3 className="section_title">
                             Переваги
                         </h3>
                         <Row>
-                            <Col xs={6} md={4} lg={4}>
-                                <Thumbnail src="/img/img-test.png" alt="242x200">
-                                    <h3>Thumbnail label</h3>
-                                    <p>Description</p>
-                                </Thumbnail>
+                            <Col xs={12} sm={6} md={4} lg={4}>
+                                <div className="item_plus">
+                                    <img src="/img/stopwatch.png" alt="Stop watch"/>
+                                    <h3 className="item_plus_title">Швидко</h3>
+                                    <div className="item_plus_description">
+                                        Швидкість — фізична величина, що
+                                        відповідає відношенню переміщення
+                                        тіла до проміжку часу, за який
+                                        це переміщення відбувалось
+                                    </div>
+                                </div>
                             </Col>
-                            <Col xs={6} md={4}>
-                                <Thumbnail src="/img/img-test.png" alt="242x200">
-                                    <h3>Thumbnail label</h3>
-                                    <p>Description</p>
-                                    <p>
-                                        <Button bsStyle="primary">Button</Button>&nbsp;
-                                        <Button bsStyle="default">Button</Button>
-                                    </p>
-                                </Thumbnail>
+                            <Col xs={12} sm={6} md={4} lg={4}>
+                                <div className="item_plus">
+                                    <img src="/img/success.png" alt="Stop watch"/>
+                                    <h3 className="item_plus_title">Якісно</h3>
+                                    <div className="item_plus_description">
+                                        Якість — філософське поняття, з термінології
+                                        гуманітарних наук. ... якість це — побічна
+                                        обставина, за допомогою якої річ є
+                                        якогось типу чи виду
+                                    </div>
+                                </div>
                             </Col>
-                            <Col xs={6} md={4}>
-                                <Thumbnail src="/img/img-test.png" alt="242x200">
-                                    <h3>Thumbnail label</h3>
-                                    <p>Description</p>
-                                    <p>
-                                        <Button bsStyle="primary">Button</Button>&nbsp;
-                                        <Button bsStyle="default">Button</Button>
-                                    </p>
-                                </Thumbnail>
+                            <Col xs={12} sm={6} md={4} lg={4}>
+                                <div className="item_plus">
+                                    <img src="/img/no_line.png" alt="No line" className="marg-img"/>
+                                    <h3 className="item_plus_title">Без черг</h3>
+                                    <div className="item_plus_description">
+                                        Черга (англ. queue) в програмуванні
+                                        динамічна структура даних, що працює
+                                        за принципом ... Елемент, що додається
+                                        до черги, опиняється в її хвості.
+                                    </div>
+                                </div>
                             </Col>
                         </Row>
                     </div>
