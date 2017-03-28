@@ -58,17 +58,16 @@ export default class LandingPage extends React.Component {
                     </ButtonToolbar>
                 </Well>
 
-                <Well>
-                    <Grid>
+                <section className="section-plus">
+                    <div className="wrap">
+                        <h3 className="section-title">
+                            Переваги
+                        </h3>
                         <Row>
-                            <Col xs={6} md={4}>
+                            <Col xs={6} md={4} lg={4}>
                                 <Thumbnail src="/img/img-test.png" alt="242x200">
                                     <h3>Thumbnail label</h3>
                                     <p>Description</p>
-                                    <p>
-                                        <Button bsStyle="primary">Button</Button>&nbsp;
-                                        <Button bsStyle="default">Button</Button>
-                                    </p>
                                 </Thumbnail>
                             </Col>
                             <Col xs={6} md={4}>
@@ -92,8 +91,8 @@ export default class LandingPage extends React.Component {
                                 </Thumbnail>
                             </Col>
                         </Row>
-                    </Grid>
-                </Well>
+                    </div>
+                </section>
 
                 <footer>
                     Contact info
