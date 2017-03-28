@@ -21,7 +21,7 @@ export default class LandingPage extends React.Component {
         return (
             <div className="landing-page">
                 <header>
-                    <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Landing page</h2>
+
                 </header>
                 <Well>
                     Hello world!
