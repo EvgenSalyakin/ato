@@ -71,12 +71,26 @@ img.marg-img {
     margin-bottom:70px;
 }
 .wrap_logo_partner{
-    max-width: 1146px;
+    /*max-width: 1146px;*/
     margin:0 auto;
     text-align: center;
 }
-.wrap_logo_partner img{
-    display: inline-block;
-    max-width: 200px;
+.carousel-inner > .item > img {
+    max-width:250px;
+    display:inline-block;
+    padding: 0 20px;
+    margin-bottom:20px;
+}
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before{
+    display: none;
+}
+.carousel-control.left,
+.carousel-control.right{
+    visibility: hidden;
+}
+
+.carousel-indicators{
+    bottom: -60px;
 }
 

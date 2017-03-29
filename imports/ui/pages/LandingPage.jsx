@@ -12,7 +12,9 @@ import {
     Form,
     FormGroup,
     FormControl,
-    ControlLabel
+    ControlLabel,
+    Carousel,
+    Gluphikon
 } from 'react-bootstrap'
 
 export default class LandingPage extends React.Component {
@@ -139,20 +141,26 @@ export default class LandingPage extends React.Component {
                             Партнери
                         </h3>
                         <div className="wrap_logo_partner">
-                            <Row>
-                                <Col lg={3}>
-                                    <img src="/img/valor-wings.png" alt="valor-wings"/>
-                                </Col>
-                                <Col lg={3}>
-                                    <img src="/img/ibm.png" alt="ibm"/>
-                                </Col>
-                                <Col lg={3}>
-                                    <img src="/img/red.png" alt="red"/>
-                                </Col>
-                                <Col lg={3}>
-                                    <img src="/img/band.png" alt="band"/>
-                                </Col>
-                            </Row>
+                            <Carousel>
+                                <Carousel.Item>
+                                    <img alt="valor" src="/img/valor-wings.png"/>
+                                    <img alt="ibm" src="/img/ibm.png"/>
+                                    <img alt="red" src="/img/red.png"/>
+                                    <img alt="band" src="/img/band.png"/>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img alt="valor" src="/img/valor-wings.png"/>
+                                    <img alt="ibm" src="/img/ibm.png"/>
+                                    <img alt="red" src="/img/red.png"/>
+                                    <img alt="band" src="/img/band.png"/>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img alt="valor" src="/img/valor-wings.png"/>
+                                    <img alt="ibm" src="/img/ibm.png"/>
+                                    <img alt="red" src="/img/red.png"/>
+                                    <img alt="band" src="/img/band.png"/>
+                                </Carousel.Item>
+                            </Carousel>
                         </div>
                     </div>
                 </section>
