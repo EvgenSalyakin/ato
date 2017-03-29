@@ -1,5 +1,5 @@
 .about_program,
-.section-plus{
+.section-plus {
     padding: 50px 0 30px;
 }
 
@@ -16,18 +16,18 @@
 
 /*Section about program*/
 
-.about_title{
+.about_title {
     margin-bottom: 40px;
 }
 
 .about_program_description {
     max-width: 960px;
     margin: 0 auto;
-    text-align:center;
+    text-align: center;
     font-size: 18px;
     line-height: 36px;
     font-weight: 400;
-    color:#3a3a3a;
+    color: #3a3a3a;
 }
 
 /*Section plus*/
@@ -60,3 +60,23 @@ img.marg-img {
     font-weight: 700;
     line-height: 36px;
 }
+
+/*Section partners*/
+.partners-wrap {
+    background-color: #005b7f;
+    padding:80px 0;
+}
+.section_title--color {
+    color: white;
+    margin-bottom:70px;
+}
+.wrap_logo_partner{
+    max-width: 1146px;
+    margin:0 auto;
+    text-align: center;
+}
+.wrap_logo_partner img{
+    display: inline-block;
+    max-width: 200px;
+}
+

@@ -133,7 +133,29 @@ export default class LandingPage extends React.Component {
                         </Row>
                     </div>
                 </section>
-
+                <section className="partners-wrap">
+                    <div className="wrap">
+                        <h3 className="section_title section_title--color">
+                            Партнери
+                        </h3>
+                        <div className="wrap_logo_partner">
+                            <Row>
+                                <Col lg={3}>
+                                    <img src="/img/valor-wings.png" alt="valor-wings"/>
+                                </Col>
+                                <Col lg={3}>
+                                    <img src="/img/ibm.png" alt="ibm"/>
+                                </Col>
+                                <Col lg={3}>
+                                    <img src="/img/red.png" alt="red"/>
+                                </Col>
+                                <Col lg={3}>
+                                    <img src="/img/band.png" alt="band"/>
+                                </Col>
+                            </Row>
+                        </div>
+                    </div>
+                </section>
                 <footer>
                     Contact info
                 </footer>
