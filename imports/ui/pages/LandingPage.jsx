@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
     Well,
     ButtonToolbar,
@@ -13,7 +13,7 @@ import {
     FormGroup,
     FormControl,
     ControlLabel
-} from 'react-bootstrap'
+} from "react-bootstrap";
 
 export default class LandingPage extends React.Component {
 
@@ -21,7 +21,71 @@ export default class LandingPage extends React.Component {
         return (
             <div className="landing-page">
                 <header>
+                    <div className="wrap">
+                        <div>
+                            <div className="menu-section clearfix">
+                                <div className="menu-wrap">
+                                    <nav>
+                                        <ul className="clearfix">
+                                            <li className="menu-item">
+                                                <a href="#" className="fa fa-search" aria-hidden="true">
 
+                                                </a>
+                                            </li>
+                                            <li className="menu-item">
+                                                <a href="#" className="fa fa-envelope-o" aria-hidden="true">
+
+                                                </a>
+                                            </li>
+                                            <li className="menu-item profile">
+                                                <a href="#" className="profile-face">
+
+                                                </a>
+                                            </li>
+                                            <li className="menu-item">
+                                                <DropdownButton id="bg-nested-dropdown" className="fa fa-bars" aria-hidden="true">
+                                                    <MenuItem eventKey="1">Dropdown link</MenuItem>
+                                                    <MenuItem eventKey="2">Dropdown link</MenuItem>
+                                                </DropdownButton>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div className="social-card-section">
+                                <Row>
+                                    <Col xs={12} md={7}>
+                                        <h1>
+                                            Соціальна картка<br />
+                                            учасника<br />
+                                            АТО
+                                        </h1>
+                                    </Col>
+                                    <Col xs={12} md={5} className="card-wrapper">
+                                        <img src="/img/card.png" alt="social card..." className="card-ato"/>
+                                    </Col>
+                                </Row>
+                            </div>
+                            <div className="social-links-section">
+                                <ul className="links-wrapper clearfix">
+                                    <li className="link-item">
+                                        <a href="" className="fa fa-vk" aria-hidden="true">
+                                        </a>
+                                    </li>
+                                    <li className="link-item">
+                                        <a href="" className="fa fa-facebook" aria-hidden="true">
+
+                                        </a>
+                                    </li>
+                                    <li className="link-item">
+                                        <a href="" className="fa fa-google-plus" aria-hidden="true">
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </header>
                 <Well>
                     Hello world!
