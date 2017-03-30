@@ -7,6 +7,12 @@ body {
     margin: 0;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 html, body, .wrapper {
     font-family: 'Merriweather', serif !important;
     width: 100%;
@@ -66,7 +72,7 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0px 0;
+    margin: 0 0;
 }
 
 a:focus {
