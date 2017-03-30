@@ -15,6 +15,7 @@ import {
     ControlLabel
 } from "react-bootstrap";
 
+
 export default class LandingPage extends React.Component {
 
     render() {
@@ -197,7 +198,35 @@ export default class LandingPage extends React.Component {
                         </Row>
                     </div>
                 </section>
-
+                <section className="partners-wrap">
+                    <div className="wrap">
+                        <h3 className="section_title section_title--color">
+                            Партнери
+                        </h3>
+                        <div className="wrap_logo_partner">
+                            <Carousel>
+                                <Carousel.Item>
+                                    <img alt="valor" src="/img/valor-wings.png"/>
+                                    <img alt="ibm" src="/img/ibm.png"/>
+                                    <img alt="red" src="/img/red.png"/>
+                                    <img alt="band" src="/img/band.png"/>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img alt="valor" src="/img/valor-wings.png"/>
+                                    <img alt="ibm" src="/img/ibm.png"/>
+                                    <img alt="red" src="/img/red.png"/>
+                                    <img alt="band" src="/img/band.png"/>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img alt="valor" src="/img/valor-wings.png"/>
+                                    <img alt="ibm" src="/img/ibm.png"/>
+                                    <img alt="red" src="/img/red.png"/>
+                                    <img alt="band" src="/img/band.png"/>
+                                </Carousel.Item>
+                            </Carousel>
+                        </div>
+                    </div>
+                </section>
                 <footer>
                     Contact info
                 </footer>
