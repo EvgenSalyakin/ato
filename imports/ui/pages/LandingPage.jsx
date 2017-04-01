@@ -46,7 +46,8 @@ export default class LandingPage extends React.Component {
                                                 </a>
                                             </li>
                                             <li className="menu-item">
-                                                <DropdownButton id="bg-nested-dropdown" className="fa fa-bars" aria-hidden="true">
+                                                <DropdownButton id="bg-nested-dropdown" className="fa fa-bars"
+                                                                aria-hidden="true">
                                                     <MenuItem eventKey="1">Dropdown link</MenuItem>
                                                     <MenuItem eventKey="2">Dropdown link</MenuItem>
                                                 </DropdownButton>
@@ -90,55 +91,7 @@ export default class LandingPage extends React.Component {
                         </div>
                     </div>
                 </header>
-                <Well>
-                    Hello world!
-                    <Form inline>
-                        <FormGroup controlId="formInlineName">
-                            <ControlLabel>Name</ControlLabel>
-                            {' '}
-                            <FormControl type="text" placeholder="Jane Doe"/>
-                        </FormGroup>
-                        {' '}
-                        <FormGroup controlId="formInlineEmail">
-                            <ControlLabel>Email</ControlLabel>
-                            {' '}
-                            <FormControl type="email" placeholder="jane.doe@example.com"/>
-                        </FormGroup>
-                        {' '}
-                        <Button type="submit">
-                            Send invitation
-                        </Button>
-                    </Form>
-                </Well>
-
-                <Well>
-                    <ButtonToolbar>
-                        {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
-                        <Button bsStyle="primary">Primary</Button>
-
-                        {/* Indicates a successful or positive action */}
-                        <Button bsStyle="success">Success</Button>
-
-                        {/* Contextual button for informational alert messages */}
-                        <Button bsStyle="info">Info</Button>
-
-                        {/* Indicates caution should be taken with this action */}
-                        <Button bsStyle="warning">Warning</Button>
-
-                        {/* Indicates a dangerous or potentially negative action */}
-                        <Button bsStyle="danger">Danger</Button>
-
-                        <DropdownButton bsStyle="primary" title="Dropup" key={1} id="asd">
-                            <MenuItem eventKey="1">Action</MenuItem>
-                            <MenuItem eventKey="2">Another action</MenuItem>
-                            <MenuItem eventKey="3" active>Active Item</MenuItem>
-                            <MenuItem divider/>
-                            <MenuItem eventKey="4">Separated link</MenuItem>
-                        </DropdownButton>
-
-                    </ButtonToolbar>
-                </Well>
-                <section className="about_program">
+                <section className="about_program" id="about-program">
                     <div>
                         <h3 className="section_title about_title">
                             Про програму
@@ -155,7 +108,7 @@ export default class LandingPage extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section className="section-plus">
+                <section className="section-plus" id="plus">
                     <div className="wrap">
                         <h3 className="section_title">
                             Переваги
@@ -200,7 +153,7 @@ export default class LandingPage extends React.Component {
                         </Row>
                     </div>
                 </section>
-                <section className="partners-wrap">
+                <section className="partners-wrap" id="partners">
                     <div className="wrap">
                         <h3 className="section_title section_title--color">
                             Партнери
@@ -229,8 +182,40 @@ export default class LandingPage extends React.Component {
                         </div>
                     </div>
                 </section>
-                <footer>
-                    Contact info
+                <footer className="footer">
+                    <div className="wrap">
+                        <div className="footer-content">
+                            <ul className="footer-menu">
+                                <li className="item-menu">
+                                    <a href="#about-program">Про програму </a>
+                                </li>
+                                <li className="item-menu">
+                                    <a href="#plus">Переваги</a>
+                                </li>
+                                <li className="item-menu">
+                                    <a href="#partners">Партнери</a>
+                                </li>
+                            </ul>
+                            <div className="social-links-section social-links-footer">
+                                <ul className="links-wrapper clearfix">
+                                    <li className="link-item">
+                                        <a href="" className="fa fa-vk fa--color" aria-hidden="true">
+                                        </a>
+                                    </li>
+                                    <li className="link-item">
+                                        <a href="" className="fa fa-facebook fa--color" aria-hidden="true">
+
+                                        </a>
+                                    </li>
+                                    <li className="link-item">
+                                        <a href="" className="fa fa-google-plus fa--color" aria-hidden="true">
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </footer>
             </div>
         )
