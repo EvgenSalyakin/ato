@@ -1,24 +1,18 @@
-import React from "react";
-import {
-    Well,
-    ButtonToolbar,
-    Button,
-    DropdownButton,
-    MenuItem,
-    Grid,
-    Row,
-    Col,
-    Thumbnail,
-    Form,
-    FormGroup,
-    FormControl,
-    ControlLabel,
-    Carousel,
-    Gluphikon
-} from "react-bootstrap";
+import React, { Component } from 'react';
+import {Tracker} from 'meteor/tracker';
+import {compose} from 'react-komposer';
+import { Well, ButtonToolbar, Button, DropdownButton, MenuItem, Grid,
+    Row, Col, Thumbnail, Form, FormGroup, FormControl, ControlLabel, Carousel, Gluphikon } from "react-bootstrap";
+import MapComponent from '../component/MapComponent'
 
 
-export default class LandingPage extends React.Component {
+class LandingPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        //console.dir(props.data);
+    }
 
     render() {
         return (
@@ -182,6 +176,107 @@ export default class LandingPage extends React.Component {
                         </div>
                     </div>
                 </section>
+
+                <section className="map-page">
+                    <aside>
+                        <ul className="map-navigation">
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 10% - парк імені 30-річчя Перемоги</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 5% - парк Хіміків</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 15% - парк Соборний</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 10% - парк імені 30-річчя Перемоги</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 5% - парк Хіміків</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 15% - парк Соборний</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 10% - парк імені 30-річчя Перемоги</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 5% - парк Хіміків</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 15% - парк Соборний</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 10% - парк імені 30-річчя Перемоги</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 5% - парк Хіміків</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 15% - парк Соборний</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 10% - парк імені 30-річчя Перемоги</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 5% - парк Хіміків</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="band" src="/img/branding.png"/>
+                                    <span>знижка 15% - парк Соборний</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <div className="map-block">
+                        <MapComponent markers={this.props.data} />
+                    </div>
+                </section>
+
                 <footer className="footer">
                     <div className="wrap">
                         <div className="footer-content">
@@ -221,3 +316,35 @@ export default class LandingPage extends React.Component {
         )
     }
 }
+
+function getTrackerLoader(reactiveMapper) {
+    return (props, onData, env) => {
+        let trackerCleanup = null;
+        const handler = Tracker.nonreactive(() => {
+            return Tracker.autorun(() => {
+                // assign the custom clean-up function.
+                trackerCleanup = reactiveMapper(props, onData, env);
+            });
+        });
+
+        return () => {
+            if (typeof trackerCleanup === 'function') trackerCleanup();
+            return handler.stop();
+        };
+    };
+}
+
+function reactiveMapper(props, onData) {
+
+    // let data = {};
+    // onData(null, {data});
+    Meteor.call('getLocationsFromJSON', (err, data) => {
+        if (err) {
+            throw new Meteor.Error('error');
+        } else {
+            onData(null, {data});
+        }
+    });
+}
+
+export default compose(getTrackerLoader(reactiveMapper))(LandingPage);
