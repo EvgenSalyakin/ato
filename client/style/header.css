@@ -6,6 +6,7 @@ header {
     background: url("/img/header-bg.png") no-repeat center/cover;
     width: 100%;
     padding: 10px 0 70px 0;
+    color: #ffffff;
 }
 
 header h1 {
