@@ -47,9 +47,9 @@ section.map-page {
 
 .map-page aside .map-navigation a img {
     display: block;
-    width: auto;
-    height: 100%;
-    margin: 0 5px;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .map-page aside .map-navigation a:hover img {
