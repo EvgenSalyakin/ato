@@ -14,6 +14,9 @@ export default class Aside extends Component {
                             <a href="/admin-cards">Cards</a>
                         </li>
                         <li>
+                            <a href="/admin-outlets">Outlets</a>
+                        </li>
+                        <li>
                             <a href="/admin-users">Users</a>
                         </li>
                         <li>

@@ -1,7 +1,15 @@
 import React from 'react';
-import { Well, ButtonToolbar, Button, DropdownButton, MenuItem } from 'react-bootstrap'
+import { Well, Image, ButtonToolbar, Button, DropdownButton, MenuItem } from 'react-bootstrap'
+
+
 
 export default class AdminPage extends React.Component {
+    constructor(props){
+        super(props);
+
+        console.log('Admin page');
+    }
+
 
     render() {
         return (
@@ -9,9 +17,6 @@ export default class AdminPage extends React.Component {
                 <header>
                     <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Admin</h2>
                 </header>
-                <Well>
-                    Hello world!
-                </Well>
 
                 <Well>
                     <ButtonToolbar>

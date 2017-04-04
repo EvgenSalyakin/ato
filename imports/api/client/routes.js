@@ -11,6 +11,7 @@ import PageNotFound from '../../ui/pages/PageNotFound';
 import LandingPage from '../../ui/pages/LandingPage';
 import AdminPage from '../../ui/pages/AdminPage';
 import CardsAdminPage from '../../ui/pages/CardsAdminPage';
+import OutletsAdminPage from '../../ui/pages/OutletsAdminPage';
 import UsersAdminPage from '../../ui/pages/UsersAdminPage';
 import SingleCardPage from '../../ui/pages/SingleCardPage';
 
@@ -32,6 +33,13 @@ FlowRouter.route('/admin-cards', {
     name: "Cards",
     action(){
         mount(App, {main: <CardsAdminPage />});
+    }
+});
+
+FlowRouter.route('/admin-outlets', {
+    name: "Outlets",
+    action(){
+        mount(App, {main: <OutletsAdminPage />});
     }
 });
 
