@@ -1,0 +1,96 @@
+.about_program,
+.section-plus {
+    padding: 50px 0 30px;
+}
+
+/*Sction title*/
+.section_title {
+    margin-top: 0;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 76px;
+    color: #000;
+}
+
+/*Section about program*/
+
+.about_title {
+    margin-bottom: 40px;
+}
+
+.about_program_description {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #3a3a3a;
+}
+
+/*Section plus*/
+.item_plus {
+    text-align: center;
+}
+
+.item_plus > img {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+img.marg-img {
+    margin-top: 29px;
+}
+
+.item_plus_title {
+    margin-top: 0;
+    margin-bottom: 38px;
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.item_plus_description {
+    max-width: 360px;
+    display: inline-block;
+    color: #3a3a3a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+/*Section partners*/
+.partners-wrap {
+    background-color: #005b7f;
+    padding:80px 0;
+}
+.section_title--color {
+    color: white;
+    margin-bottom:70px;
+}
+.wrap_logo_partner{
+    /*max-width: 1146px;*/
+    margin:0 auto;
+    text-align: center;
+}
+.carousel-inner > .item > img {
+    max-width:250px;
+    display:inline-block;
+    padding: 0 20px;
+    margin-bottom:20px;
+}
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before{
+    display: none;
+}
+.carousel-control.left,
+.carousel-control.right{
+    visibility: hidden;
+}
+
+.carousel-indicators{
+    bottom: -60px;
+}
+
