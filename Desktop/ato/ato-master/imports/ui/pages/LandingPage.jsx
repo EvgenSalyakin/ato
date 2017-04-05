@@ -140,7 +140,7 @@ class LandingPage extends React.Component {
                                                                 <Col xs={7}>
                                                                     <FormGroup controlId="remember"
                                                                                className="remember-checkbox">
-                                                                        <ControlLabel>Запам'ятати мене</ControlLabel>
+                                                                        <ControlLabel>Запам'ятати менe</ControlLabel>
                                                                         <FormControl type="checkbox"/>
                                                                     </FormGroup>
                                                                 </Col>
