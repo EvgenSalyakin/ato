@@ -1,0 +1,80 @@
+/**==========================================================================*/
+/*Sidebar/Nav style*/
+/**==========================================================================*/
+
+.sidebar-container {
+    height: auto;
+    position: fixed;
+    top: 18px;
+    left: 0;
+    bottom: 0;
+    z-index: 1010;
+    width: 165px;
+    box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+    border-top-right-radius: 30%;
+    /*border-top: 2px dotted #6dcec1;*/
+    border-right: 3px dotted #6dcec1;
+    background: #156f63;
+    background: -webkit-repeating-linear-gradient(
+            40deg, rgba(5, 78, 69, 0.8),
+            rgba(22, 99, 89, 0.9) 3px,
+            #0b6156 5px,
+            rgba(4, 86, 75, 0.7) 5px );
+    /* Opera 11.1 to 12.0 */
+    background: -o-repeating-linear-gradient(
+            40deg, rgba(5, 78, 69, 0.8),
+            rgba(22, 99, 89, 0.9) 3px,
+            #0b6156 5px,
+            rgba(4, 86, 75, 0.7) 5px );
+    /* Firefox 3.6 to 15 */
+    background: -moz-repeating-linear-gradient(
+            40deg, rgba(5, 78, 69, 0.8),
+            rgba(22, 99, 89, 0.9) 3px,
+            #0b6156 5px,
+            rgba(4, 86, 75, 0.7) 5px );
+    /* Standard syntax */
+    background: repeating-linear-gradient(
+            40deg, rgba(5, 78, 69, 0.8),
+            rgba(22, 99, 89, 0.9) 3px,
+            #0b6156 5px,
+            rgba(4, 86, 75, 0.7) 5px );
+}
+
+aside {
+    overflow: hidden;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+ul.navigation {
+    padding: 60px 20px;
+}
+
+ul.navigation li a {
+    display: block;
+    padding: 9px 0px;
+}
+
+aside.nav .navigation li a {
+    font-size: 17px;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #dde9f2;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+aside.nav .navigation li a:hover,
+aside.nav .navigation li a:focus {
+    color: #00e5ff;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
