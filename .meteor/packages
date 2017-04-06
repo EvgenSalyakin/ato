@@ -19,7 +19,7 @@ ecmascript@0.6.3              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.2.3            # Server-side component of the `meteor shell` command
 
 kadira:flow-router          #Carefully Designed Client Side Router for Meteor
-accounts-password@1.3.4           #Password support for accounts
+accounts-password           #Password support for accounts
 accounts-google@1.1.1             #Login service for Google accounts
 accounts-facebook@1.1.1           #Login service for Facebook accounts
 service-configuration@1.0.11       #Manage the configuration for third-party services
@@ -30,3 +30,4 @@ facebook-config-ui@1.0.0
 google-config-ui@1.0.0
 fortawesome:fontawesome     #Fontawesome icon
 reywood:publish-composite
+accounts-ui
