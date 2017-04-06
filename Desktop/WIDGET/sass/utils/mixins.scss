@@ -1,6 +1,0 @@
-
-@mixin transition($what, $time, $effect) {
-    -webkit-transition: $what $time $effect;
-    transition: $what $time $effect;
-}
-
