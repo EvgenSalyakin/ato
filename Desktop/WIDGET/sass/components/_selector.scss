@@ -1,0 +1,19 @@
+.select-wrap {
+    z-index: 7;
+    .selecter-selected {
+        padding: 0;
+        text-align: center;
+        opacity: 0.5;
+    }
+}
+.selecter {
+    margin: 0;
+    max-width: 55px;
+    min-width: 55px;
+}
+.selecter-selected {
+    border: none;
+    &:after {
+        content: none;
+    }
+}

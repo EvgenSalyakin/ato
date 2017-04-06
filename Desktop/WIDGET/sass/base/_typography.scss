@@ -1,0 +1,45 @@
+// Connected fonts : Roboto, font-family: 'Roboto', sans-serif;
+
+
+.button-wrap {
+    font-family: Tahoma, sans-serif;
+    font-size: 26px;
+}
+
+.widget-wrapper {
+    .widget-window {
+        .week-counter-wrapper, .daytime-switch-wrapper {
+            font-family: Tahoma, sans-serif;
+            font-size: 26px;
+            .quantity, .quantity-day {
+                font-weight: 300;
+            }
+        }
+        .week-wrapper {
+            .time-max, .time-min {
+                font-size: 20px;
+            }
+            .day {
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.item-week {
+    font-size: 26px;
+    font-family: Tahoma, sans-serif;
+}
+
+// SELECTOR TYPOGRAPHY
+
+.select-wrap {
+    .selecter-selected {
+        font-size: 26px;
+        font-weight: 300;
+    }
+}
+.selecter {
+    font-size: 26px;
+}

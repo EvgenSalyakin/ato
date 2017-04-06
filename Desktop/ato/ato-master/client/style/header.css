@@ -1,0 +1,240 @@
+/**==========================================================================*/
+/*Header style */
+/**==========================================================================*/
+
+header {
+    background: url("/img/header-bg.png") no-repeat center/cover;
+    width: 100%;
+    padding: 10px 0 70px 0;
+    color: #ffffff;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 98px;
+}
+
+header .menu-section .menu-wrap {
+    float: right;
+}
+
+header .menu-section .menu-item {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    padding-top: 40px;
+}
+
+header .menu-section .profile {
+    padding-top: 0;
+}
+
+header .menu-section .menu-item:last-child {
+    margin-right: 0;
+}
+
+header .menu-section .menu-item a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header .menu-section .menu-item a:hover {
+    opacity: 0.8;
+}
+
+header .menu-section .menu-item .search {
+    background: url("../../img/search.png") no-repeat;
+}
+
+header .menu-section .menu-item .message {
+    background: url("../../img/email.png") no-repeat;
+}
+
+header .menu-section .menu-item .profile-face {
+    background: url("../../img/profile-face.png") no-repeat;
+    width: 72px;
+    height: 72px;
+}
+
+header .menu-section .menu-item .menu {
+    background: url("../../img/menu.png") no-repeat;
+}
+
+header .card-wrapper img {
+    width: 100%;
+}
+
+header .social-card-section {
+    margin-top: 125px;
+}
+
+.social-links-section {
+    margin-top: 145px;
+}
+
+.social-links-section .link-item {
+    float: left;
+}
+
+.social-links-section .links-wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.social-links-section .links-wrapper li {
+    margin-right: 45px;
+}
+
+.social-links-section .links-wrapper li:last-child {
+    margin-right: 0;
+}
+
+.social-links-section .link-item a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.social-links-section .link-item a:hover {
+    opacity: 0.8;
+}
+
+/* header dropDown menu style */
+
+header .log-in .dropdown button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+header .log-in .dropdown button:hover {
+    opacity: 0.8;
+}
+
+header .log-in .dropdown .btn::before {
+    position: absolute;
+    top: 1px;
+    left: 9px;
+}
+
+header .log-in .dropdown .dropdown-menu {
+    left: -125px;
+    top: 150%;
+}
+
+.log-in {
+    display: none;
+}
+
+.log-out {
+    display: block;
+}
+/* LOG OUT */
+header .log-out .dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
+    top: 130%;
+}
+
+
+header .log-out .menu-item .dropdown-menu {
+    width: 340px;
+    padding: 25px 15px;
+    color: #333333;
+}
+
+header .log-out .link-item {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* FORM */
+
+.form-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-wrap input, .form-wrap button {
+    width: 100%;
+}
+
+.remember-checkbox:after, .remember-checkbox:before {
+    display: table;
+    content: " ";
+}
+
+.remember-checkbox:after {
+    clear: both;
+}
+
+.remember-checkbox .control-label, .remember-checkbox .form-control {
+    float: left;
+}
+
+.remember-checkbox .control-label {
+    line-height: 38px;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.remember-checkbox .form-control {
+    width: auto;
+}
+
+/*  registration  */
+
+header .menu-item .registration-links {
+    margin-top: 20px;
+}
+
+.links-wrap .links-wrapper .link-item a {
+    width: 45px;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    line-height: 45px;
+    font-size: 22px;
+}
+
+.links-wrap a.fa-vk:hover {
+    background-color: #00baef;
+    opacity: 1;
+}
+.links-wrap a.fa-facebook:hover {
+    background-color: #496fa5;
+    opacity: 1;
+}
+.links-wrap a.fa-google-plus:hover {
+    background-color: #eb4125;
+    opacity: 1;
+}

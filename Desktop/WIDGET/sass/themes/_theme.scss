@@ -1,0 +1,90 @@
+// BUTTON THEME STYLE
+
+.button-wrap {
+    color: $main_color;
+    box-shadow: 0 3px 6px $main_color;
+    .open-button {
+        background: #0072ff;
+        background: linear-gradient($main_second_color, $main_third_color);
+        color: white;
+        box-shadow: inset 0 -5px 15px $main_color;
+        &:active {
+            box-shadow: inset 0 2px 25px $main_color;
+        }
+    }
+}
+
+// WIDGET THEME STYLE
+
+.widget-window {
+    box-shadow: 0 3px 6px $main_color;
+    .daytime-switch-wrapper {
+        box-shadow: 0 3px 6px $main_color;
+        color: $main_color;
+    }
+    .week-wrapper {
+        box-shadow: 0 3px 6px $main_color;
+        .time-max, .time-min {
+            color: $main_color;
+        }
+        .day {
+            color: $main_color;
+        }
+    }
+}
+
+.item-week {
+    color: $main_color;
+}
+
+// SCALE SLIDE STYLE
+
+.scale-wrapper {
+    .default-wrap {
+        box-shadow: 1px 5px 15px $main_color;
+        background: url('../images/slide-bg5.png') $main_color;
+        &:before {
+            background: url('../images/slide-bg-bottom.png') no-repeat;
+            box-shadow: 0 1px 2px $main_color;
+        }
+        &:after {
+            background: url('../images/slide-bg-top.png') no-repeat;
+            box-shadow: 0 0 2px $main_color;
+        }
+    }
+    .slide-wrap {
+        &:before {
+            background: none;
+            box-shadow: none;
+        }
+        &:after {
+            background: none;
+            box-shadow: none;
+        }
+    }
+}
+
+// ====== Converted styles to sliders ====== //
+
+.default-slider {
+    .ui-state-default {
+        background: #0072ff;
+        background: linear-gradient($main_second_color, $main_third_color);
+        box-shadow: inset 0 -2px -5px $main_color;
+    }
+    .ui-state-active {
+        background: #0072ff;
+        background: linear-gradient($main_second_color, $main_third_color);
+        box-shadow: inset 0 0 2px $main_color;
+    }
+    .ui-state-hover {
+        background: #0072ff;
+        background: linear-gradient($main_second_color, $main_third_color);
+        box-shadow: inset 0 -1 3px $main_color;
+    }
+}
+.slider {
+    @extend .default-slider;
+}
+
+// SELECTOR STY

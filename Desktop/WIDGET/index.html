@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+    <link rel="stylesheet" href="libs/jquery.fs.selecter.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+<body>
+<main>
+    <div class="widget-wrapper" id="box" style="display: none;">
+        <div class="container-fluid">
+            <div class="widget-window row">
+                <div class="daytime-switch-wrapper col-xs-12">
+                    Daytime Only : <span class="switch-off">OFF</span><span class="switch-on active">ON</span>
+                </div>
+                <div class="week-wrapper col-xs-12">
+                    <div class="buttons-wrapper clearfix">
+                        <div class="add-button-wrap clearfix">
+                            <div class="add-button">
+                                <div class="second-circle">
+                                    <span class="add">+</span>
+                                </div>
+                            </div>
+                            <div class="text">Add</div>
+                        </div>
+                        <div class="del-button-wrap">
+                            <div class="del-button">
+                                <div class="second-circle">
+                                    <span class="del">X</span>
+                                </div>
+                            </div>
+                            <div class="text">Delete</div>
+                        </div>
+                    </div>
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li class="item">
+                                <div class="item-week">
+                                </div>
+                                <div class="scale-wrapper">
+                                    <ul class="list-scale-wrap">
+                                        <li class="times-wrap-left">
+                                            <div class="time-min">00</div>
+                                            <div class="time-max">24</div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Mon</div>
+                                            <div class="add-times-left">
+                                                <div class="default-wrap">
+                                                    <div class="monday default-slider slide-active"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Tue</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider  tuesday"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Wed</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider wednesday"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Th</div>
+                                            <div></div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider thursday"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Fr</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider  friday"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Sat</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider  saturday"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Sun</div>
+                                            <div class="add-times-right">
+                                                <div class="default-wrap">
+                                                    <div class="default-slider  sunday"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="times-wrap-right">
+                                            <div class="time-min">00</div>
+                                            <div class="time-max">24</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-week"></div>
+                                <div class="scale-wrapper">
+                                    <ul class="list-scale-wrap">
+                                        <li class="times-wrap-left">
+                                            <div class="time-min">00</div>
+                                            <div class="time-max">24</div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Mon</div>
+                                            <div class="add-times-left">
+                                                <div class="default-wrap">
+                                                    <div class="monday2 default-slider"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Tue</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider  tuesday2"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Wed</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider wednesday2"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Th</div>
+                                            <div></div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider thursday2"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Fr</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider  friday2"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Sat</div>
+                                            <div class="default-wrap">
+                                                <div class="default-slider  saturday2"></div>
+                                            </div>
+                                        </li>
+                                        <li class="scale-item">
+                                            <div class="day">Sun</div>
+                                            <div class="add-times-right">
+                                                <div class="default-wrap">
+                                                    <div class="default-slider  sunday2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="times-wrap-right">
+                                            <div class="time-min">00</div>
+                                            <div class="time-max">24</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="custom-navigation">
+                            <div class="flex-prev-block"></div>
+                            <a href="#" class="flex-prev"></a>
+                            <div class="custom-controls-container"></div>
+                            <a href="#" class="flex-next"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-button-wrapper col-xs-12">
+                    <div class="close-button">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="button-wrap">
+            Instant
+            <div class="open-button on-btn" onclick="openbox('box');">
+                <span content="">Sheduled</span>
+            </div>
+        </div>
+    </div>
+    <div class="contentSlider"></div>
+    <div class="contentSlider2"></div>
+</main>
+<script src="source-js/main.js"></script>
+<script src="libs/jquery.flexslider-min.js"></script>
+<script src="libs/jquery.fs.selecter.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+</body>
+</html>
+
