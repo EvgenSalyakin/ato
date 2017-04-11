@@ -16,11 +16,11 @@ Version 1.0 29.01.2017
 ### 2. The sitemap
 
 1. Home Page
-    1.1. Includes general information about the card (the visual presentation of the Card, how it is obtained, where it can be used)
-    1.2. Login Prompt.
-        1.2.1. Users may be logged in to the site using their mail address or Facebook/Google+ social accounts.
-        1.2.2. “Remember me” option should be present to prevent users need to enter their login and password each time they are back.
-        1.2.3. “Forgot password” option should provide user an input, where he may submit his email address, which will be used by system to send a recover email. When received such an email user will have to follow a “password recovery” link. Clicking on this link will open a New Password page, where user will enter and confirm his new password. After this is successfully submitted user may log in with his new password.
+  1.1. Includes general information about the card (the visual presentation of the Card, how it is obtained, where it can be used)
+  1.2. Login Prompt.
+    1.2.1. Users may be logged in to the site using their mail address or Facebook/Google+ social accounts.
+    1.2.2. “Remember me” option should be present to prevent users need to enter their login and password each time they are back.
+    1.2.3. “Forgot password” option should provide user an input, where he may submit his email address, which will be used by system to send a recover email. When received such an email user will have to follow a “password recovery” link. Clicking on this link will open a New Password page, where user will enter and confirm his new password. After this is successfully submitted user may log in with his new password.
     1.3. Registration
         1.3.1. When registering a new account user is prompted to enter his email address, password and password confirmation.
 
