@@ -1,6 +1,6 @@
 import React from 'react';
 import {Cards} from '../../api/lib/collections'
-import { Well, Button } from 'react-bootstrap'
+import { Well, ButtonToolbar, Button, DropdownButton, FormControl, Modal, FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap'
 import {Tracker} from 'meteor/tracker';
 import {compose} from 'react-komposer';
 import {AgGridReact} from 'ag-grid-react';
@@ -11,6 +11,12 @@ class CardsAdminPage extends React.Component {
 
         this.rowHeight = 30;
         this.state = {
+            showModal: false,
+            Number:'',
+            OwnerName:'',
+            OwnerID:'',
+            DateIssued:'',
+            Status:'',
             quickFilterText: null,
             showToolPanel: false,
             columnDefs: this.createColDefs(),
@@ -30,6 +36,9 @@ class CardsAdminPage extends React.Component {
         };
 
         this.addCard = this.addCard.bind(this);
+        this.open = this.open.bind(this);
+        this.close = this.close.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     createColDefs() {
@@ -72,15 +81,30 @@ class CardsAdminPage extends React.Component {
     componentWillUnmount() {
         window.removeEventListener('resize', this.responsiveGrid);
     }
+    close() {
+        this.setState({ showModal: false });
+    }
+
+    open() {
+        this.setState({ showModal: true });
+    }
+
+    handleChange(e) {
+        this.setState({
+            [e.target.name] : e.target.value
+
+        });
+    }
 
     addCard(e) {
         e.preventDefault();
 
-        let val = { "Number" : "22222",
-                    "OwnerName" : "Petrov",
-                    "OwnerID" : "124",
-                    "DateIssued" : "01.04.17",
-                    "Status" : "Active"};
+        let val = { "Number" : this.state.Number,
+                    "OwnerName" : this.state.OwnerName,
+                    "OwnerID" : this.state.OwnerID,
+                    "DateIssued" : this.state.DateIssued,
+                    "Status" : this.state.Status
+        };
 
         Meteor.call('createCard', val, (err, res) => {
             if(err) {
@@ -99,7 +123,7 @@ class CardsAdminPage extends React.Component {
                     <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Admin</h2>
                 </header>
                 <Well>
-                    <Button bsStyle="primary" onClick={this.addCard} >Create card</Button>
+                    <Button bsStyle="primary" onClick={this.open} >Create card</Button>
                 </Well>
                     <div
                         style={{height:  '640px'}}
@@ -107,28 +131,76 @@ class CardsAdminPage extends React.Component {
 
                         <AgGridReact
                             gridOptions={this.gridOptions}
-                            //onRowClicked={this.onRowClicked.bind(this)}
                             onGridReady={this.onGridReady.bind(this)}
                             getNodeChildDetails={this.getNodeChildDetails.bind(this)}
-
                             showToolPanel={this.state.showToolPanel}
                             quickFilterText={this.state.quickFilterText}
                             icons={this.state.icons}
                             columnDefs={this.state.columnDefs}
                             rowData={this.props.data}
-
-                            // enableSorting="true"
-                            // enableFilter="true"
-                            // enableColResize="true"
                             rowHeight={this.rowHeight}
                         />
                     </div>
+
+                <Modal show={this.state.showModal} onHide={this.close}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Add Outlet</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <form>
+                            <FormGroup controlId="formBasicText">
+                                <ControlLabel>Number</ControlLabel>
+                                <FormControl
+                                    type="text"
+                                    name="Number"
+                                    value={this.state.Number}
+                                    placeholder="Enter text"
+                                    onChange={this.handleChange}
+                                />
+                                <ControlLabel>Owner Name</ControlLabel>
+                                <FormControl
+                                    type="text"
+                                    name="OwnerName"
+                                    value={this.state.OwnerName}
+                                    placeholder="Enter text"
+                                    onChange={this.handleChange}
+                                />
+                                <ControlLabel>OwnerID</ControlLabel>
+                                <FormControl
+                                    type="text"
+                                    name="OwnerID"
+                                    value={this.state.OwnerID}
+                                    placeholder="Enter text"
+                                    onChange={this.handleChange}
+                                />
+                                <ControlLabel>DateIssued</ControlLabel>
+                                <FormControl
+                                    type="text"
+                                    name="DateIssued"
+                                    value={this.state.DateIssued}
+                                    placeholder="Enter text"
+                                    onChange={this.handleChange}
+                                />
+                                <ControlLabel>Status</ControlLabel>
+                                <FormControl componentClass="select" placeholder="select" name="Status" onChange={this.handleChange}  value={this.state.Status}>
+                                    <option value="active">active</option>
+                                    <option value="inactive">inactive</option>
+                                </FormControl>
+
+                                <FormControl.Feedback />
+                            </FormGroup>
+                        </form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={this.close}>Close</Button>
+                        <Button onClick={this.addCard}>Add</Button>
+                    </Modal.Footer>
+                </Modal>
 
             </div>
         )
     }
 }
-
 
 function getTrackerLoader(reactiveMapper) {
     return (props, onData, env) => {
@@ -148,13 +220,6 @@ function getTrackerLoader(reactiveMapper) {
 }
 
 function reactiveMapper(props, onData) {
-    /*Meteor.call('getCompanies', props.search,  (err, data) => {
-     if (err) {
-     throw new Meteor.Error('error');
-     } else {
-     onData(null, {data});
-     }
-     });*/
 
     if (Meteor.subscribe('Cards').ready()) {
         let data = Cards.find().fetch();
