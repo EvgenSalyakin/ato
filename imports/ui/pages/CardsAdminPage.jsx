@@ -110,9 +110,6 @@ class CardsAdminPage extends React.Component {
             if(err) {
                 throw new Meteor.Error('Error');
             }
-            else {
-                this.setState({"errorMessage": <p className="text-danger"><i className="fa fa-exclamation-triangle"> </i> <span>{strings.accessingVineyardYourVineyardWasNotFoundTextError}</span></p>});
-            }
         });
     }
 
@@ -182,7 +179,11 @@ class CardsAdminPage extends React.Component {
                                     onChange={this.handleChange}
                                 />
                                 <ControlLabel>Status</ControlLabel>
-                                <FormControl componentClass="select" placeholder="select" name="Status" onChange={this.handleChange}  value={this.state.Status}>
+                                <FormControl componentClass="select"
+                                             placeholder="select"
+                                             name="Status"
+                                             onChange={this.handleChange}
+                                             value={this.state.Status}>
                                     <option value="active">active</option>
                                     <option value="inactive">inactive</option>
                                 </FormControl>
