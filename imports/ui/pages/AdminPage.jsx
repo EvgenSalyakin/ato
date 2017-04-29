@@ -1,15 +1,12 @@
 import React from 'react';
 import { Well, Image, ButtonToolbar, Button, DropdownButton, MenuItem } from 'react-bootstrap'
 
-
-
 export default class AdminPage extends React.Component {
     constructor(props){
         super(props);
 
         console.log('Admin page');
     }
-
 
     render() {
         return (

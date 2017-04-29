@@ -11,7 +11,7 @@ Meteor.startup(() => {
                 Accounts.createUser({
                     username: 'admin',
                     email: 'admin',
-                    password: 'admin',
+                    password: 'atoadmin',
                     profile: {
                         name: 'Admin',
                         firstName: 'Admin',
