@@ -38,7 +38,7 @@ class LandingPage extends React.Component {
                                             </li>
                                             <li className="menu-item profile">
                                                 <a href="#" className="profile-face">
-
+                                                    <img src="/img/profile-face.png" alt="avatar"/>
                                                 </a>
                                             </li>
 
@@ -108,7 +108,7 @@ class LandingPage extends React.Component {
                             Переваги
                         </h3>
                         <Row>
-                            <Col xs={12} sm={6} md={4} lg={4}>
+                            <Col xs={12} md={4}>
                                 <div className="item_plus">
                                     <img src="/img/stopwatch.png" alt="Stop watch"/>
                                     <h3 className="item_plus_title">Швидко</h3>
@@ -120,7 +120,7 @@ class LandingPage extends React.Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col xs={12} sm={6} md={4} lg={4}>
+                            <Col xs={12} md={4}>
                                 <div className="item_plus">
                                     <img src="/img/success.png" alt="Stop watch"/>
                                     <h3 className="item_plus_title">Якісно</h3>
@@ -132,7 +132,7 @@ class LandingPage extends React.Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col xs={12} sm={6} md={4} lg={4}>
+                            <Col xs={12} md={4}>
                                 <div className="item_plus">
                                     <img src="/img/no_line.png" alt="No line" className="marg-img"/>
                                     <h3 className="item_plus_title">Без черг</h3>
