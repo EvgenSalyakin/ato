@@ -60,25 +60,20 @@ class LandingPage extends React.Component {
                                         </h1>
                                     </Col>
                                     <Col xs={12} md={5} className="card-wrapper">
-                                        <img src="/img/card.png" alt="social card..." className="card-ato"/>
+                                        <img src="/img/ato-logo.png" alt="social card..." className="card-ato"/>
                                     </Col>
                                 </Row>
                             </div>
                             <div className="social-links-section">
                                 <ul className="links-wrapper clearfix">
                                     <li className="link-item">
-                                        <a href="" className="fa fa-vk" aria-hidden="true">
-                                        </a>
+                                        <a href="javascript:void(0)" className="fa fa-vk" aria-hidden="true"> </a>
                                     </li>
                                     <li className="link-item">
-                                        <a href="" className="fa fa-facebook" aria-hidden="true">
-
-                                        </a>
+                                        <a href="https://www.facebook.com/groups/kartkaato/" className="fa fa-facebook" aria-hidden="true"> </a>
                                     </li>
                                     <li className="link-item">
-                                        <a href="" className="fa fa-google-plus" aria-hidden="true">
-
-                                        </a>
+                                        <a href="javascript:void(0)" className="fa fa-google-plus" aria-hidden="true"> </a>
                                     </li>
                                 </ul>
                             </div>
@@ -294,18 +289,13 @@ class LandingPage extends React.Component {
                             <div className="social-links-section social-links-footer">
                                 <ul className="links-wrapper clearfix">
                                     <li className="link-item">
-                                        <a href="" className="fa fa-vk fa--color" aria-hidden="true">
-                                        </a>
+                                        <a href="javascript:void(0)" className="fa fa-vk fa--color" aria-hidden="true"> </a>
                                     </li>
                                     <li className="link-item">
-                                        <a href="" className="fa fa-facebook fa--color" aria-hidden="true">
-
-                                        </a>
+                                        <a href="https://www.facebook.com/groups/kartkaato/" className="fa fa-facebook fa--color" aria-hidden="true"> </a>
                                     </li>
                                     <li className="link-item">
-                                        <a href="" className="fa fa-google-plus fa--color" aria-hidden="true">
-
-                                        </a>
+                                        <a href="javascript:void(0)" className="fa fa-google-plus fa--color" aria-hidden="true"> </a>
                                     </li>
                                 </ul>
                             </div>
