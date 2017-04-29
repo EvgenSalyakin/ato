@@ -14,6 +14,7 @@ import CardsAdminPage from '../../ui/pages/CardsAdminPage';
 import OutletsAdminPage from '../../ui/pages/OutletsAdminPage';
 import UsersAdminPage from '../../ui/pages/UsersAdminPage';
 import SingleCardPage from '../../ui/pages/SingleCardPage';
+import SingleOutletPage from '../../ui/pages/SingleOutletPage';
 
 FlowRouter.route('/', {
     name: "Landing page",
@@ -21,6 +22,27 @@ FlowRouter.route('/', {
         mount(AppLanding, {main: <LandingPage />});
     }
 });
+
+FlowRouter.route('/card', {
+    name: "Card",
+    action(){
+        mount(AppLanding, {main: <SingleCardPage />});
+    }
+});
+
+FlowRouter.route('/outlet', {
+    name: "Card",
+    action(){
+        mount(AppLanding, {main: <SingleOutletPage />});
+    }
+});
+
+FlowRouter.notFound = {
+    name: "NotFoundPage",
+    action(){
+        mount(AppLanding, {main: <PageNotFound />});
+    }
+};
 
 FlowRouter.route('/admin', {
     name: "Admin page",
@@ -50,19 +72,4 @@ FlowRouter.route('/admin-users', {
     }
 });
 
-
-FlowRouter.route('/card-id', {
-    name: "Card",
-    action(){
-        mount(AppLanding, {main: <SingleCardPage />});
-    }
-});
-
-
-FlowRouter.notFound = {
-    name: "NotFoundPage",
-    action(){
-        mount(App, {main: <PageNotFound />});
-    }
-};
 
