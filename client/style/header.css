@@ -163,17 +163,33 @@ header .social-card-section {
 
 
 header .menu-item div {
-    height: 0;
+    /*height: 0;*/
+    /*overflow: hidden;*/
+    /*position: absolute;*/
+    /*z-index: 5000;*/
+    /*box-sizing: border-box;*/
+    /*top: 100px;*/
+    /*right: 0;*/
+    /*width: 300px;*/
+    /*transition: height 0.4s;*/
+}
+
+header .menu-item .show  {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
     overflow: hidden;
     position: absolute;
     z-index: 5000;
     box-sizing: border-box;
     top: 100px;
-    right: 0;
+    right: 10px;
     width: 300px;
+    height: 300px;
+    color: #555;
     transition: height 0.4s;
 }
 
-header .menu-item .show {
-    height: 162px;
+header .menu-item .hide {
+    display: none;
 }
