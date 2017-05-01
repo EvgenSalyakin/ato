@@ -24,7 +24,7 @@ accounts-google@1.1.2             #Login service for Google accounts
 accounts-facebook@1.1.1           #Login service for Facebook accounts
 service-configuration@1.0.11       #Manage the configuration for third-party services
 check@1.2.5                       #Check whether a value matches a pattern
-email@1.2.0                       #Send email messages
+email                       #Send email messages
 kadira:dochead              #Isomorphic way to manipulate document.head for Meteor apps
 facebook-config-ui@1.0.0
 google-config-ui@1.0.0
