@@ -9,15 +9,10 @@ import { Well, ButtonToolbar, Button, DropdownButton, MenuItem, Grid,
 import MapComponent from '../component/MapComponent'
 
 Accounts.ui.config({
-    passwordSignupFields: 'EMAIL_ONLY',
+    passwordSignupFields: 'USERNAME_AND_EMAIL',
     loginPath: '/',
     // onSignedInHook: () => FlowRouter.go('/'),
     // onSignedOutHook: () => FlowRouter.go('/')
-});
-
-Accounts.ui.config({
-    passwordSignupFields: 'EMAIL_ONLY',
-    loginPath: '/',
 });
 
 class LandingPage extends React.Component {
@@ -26,7 +21,7 @@ class LandingPage extends React.Component {
         super(props);
 
         this.state = {
-            dropdown: ''
+            dropdown: 'hide'
         };
 
         this.dropdownShow = this.dropdownShow.bind(this);
@@ -34,10 +29,10 @@ class LandingPage extends React.Component {
     }
 
     dropdownShow() {
-        if (!this.state.dropdown) {
+        if (this.state.dropdown==='hide') {
             this.setState({dropdown: 'show'});
         } else {
-            this.setState({dropdown: ''});
+            this.setState({dropdown: 'hide'});
         }
     }
 

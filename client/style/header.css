@@ -185,9 +185,14 @@ header .menu-item .show  {
     top: 100px;
     right: 10px;
     width: 300px;
-    height: 300px;
+    height: auto;
     color: #555;
     transition: height 0.4s;
+}
+
+header .menu-item .form-group .btn-sm {
+    width: auto !important;
+    padding: 0;
 }
 
 header .menu-item .hide {
