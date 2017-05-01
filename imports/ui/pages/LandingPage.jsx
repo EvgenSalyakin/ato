@@ -1,20 +1,44 @@
 import React, { Component } from 'react';
 import {Tracker} from 'meteor/tracker';
 import {compose} from 'react-komposer';
-import {AccountsUIWrapper} from './AccountsUIWrapper';
-
+//import {AccountsUIWrapper} from './AccountsUIWrapper';
+import { Accounts } from 'meteor/std:accounts-ui';
+//import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
 import { Well, ButtonToolbar, Button, DropdownButton, MenuItem, Grid,
     Row, Col, Thumbnail, Form, FormGroup, FormControl, ControlLabel, Carousel, Gluphikon } from "react-bootstrap";
 import MapComponent from '../component/MapComponent'
 
+Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_AND_EMAIL',
+    loginPath: '/',
+    // onSignedInHook: () => FlowRouter.go('/'),
+    // onSignedOutHook: () => FlowRouter.go('/')
+});
 
 class LandingPage extends React.Component {
 
     constructor(props) {
         super(props);
 
-        //console.dir(props.data);
+        this.state = {
+            dropdown: 'hide'
+        };
+
+        this.dropdownShow = this.dropdownShow.bind(this);
+       // this.dropdownHide = this.dropdownHide.bind(this);
     }
+
+    dropdownShow() {
+        if (this.state.dropdown==='hide') {
+            this.setState({dropdown: 'show'});
+        } else {
+            this.setState({dropdown: 'hide'});
+        }
+    }
+
+    // dropdownHide() {
+    //     this.setState({dropdown: ''});
+    // }
 
     render() {
         return (
@@ -38,18 +62,29 @@ class LandingPage extends React.Component {
                                             </li>
                                             <li className="menu-item profile">
                                                 <a href="#" className="profile-face">
-
+                                                    <img src="/img/profile-face.png" alt="avatar"/>
                                                 </a>
                                             </li>
 
                                             <li className="menu-item">
 
-                                                <DropdownButton id="bg-nested-dropdown" className="fa fa-bars"
-                                                                aria-hidden="true">
-                                                              
-                                                    <MenuItem eventKey="1">Dropdown link</MenuItem>
-                                                    <MenuItem eventKey="2">Dropdown link</MenuItem>
-                                                </DropdownButton>
+                                                <Button
+                                                    id="bg-nested-dropdown"
+                                                    className="fa fa-bars"
+                                                    aria-hidden="true"
+                                                    title=""
+                                                    onClick={this.dropdownShow} />
+                                                <div className={this.state.dropdown}>
+                                                    <Accounts.ui.LoginForm />
+                                                </div>
+                                                {/*<Accounts.ui.LoginForm />*/}
+                                                {/*<AccountsUIWrapper/>*/}
+                                                {/*<DropdownButton id="bg-nested-dropdown" className="fa fa-bars"*/}
+                                                                {/*aria-hidden="true" title="">*/}
+                                                    {/*<Accounts.ui.LoginForm />*/}
+                                                    {/*<MenuItem header eventKey="1"><Accounts.ui.LoginForm /></MenuItem>*/}
+                                                    {/*<MenuItem eventKey="2">Dropdown link</MenuItem>*/}
+                                                {/*</DropdownButton>*/}
                                             </li>
                                         </ul>
                                     </nav>
@@ -108,7 +143,7 @@ class LandingPage extends React.Component {
                             Переваги
                         </h3>
                         <Row>
-                            <Col xs={12} sm={6} md={4} lg={4}>
+                            <Col xs={12} md={4}>
                                 <div className="item_plus">
                                     <img src="/img/stopwatch.png" alt="Stop watch"/>
                                     <h3 className="item_plus_title">Швидко</h3>
@@ -120,7 +155,7 @@ class LandingPage extends React.Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col xs={12} sm={6} md={4} lg={4}>
+                            <Col xs={12} md={4}>
                                 <div className="item_plus">
                                     <img src="/img/success.png" alt="Stop watch"/>
                                     <h3 className="item_plus_title">Якісно</h3>
@@ -132,7 +167,7 @@ class LandingPage extends React.Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col xs={12} sm={6} md={4} lg={4}>
+                            <Col xs={12} md={4}>
                                 <div className="item_plus">
                                     <img src="/img/no_line.png" alt="No line" className="marg-img"/>
                                     <h3 className="item_plus_title">Без черг</h3>
