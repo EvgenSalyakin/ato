@@ -1,20 +1,49 @@
 import React, { Component } from 'react';
 import {Tracker} from 'meteor/tracker';
 import {compose} from 'react-komposer';
-import {AccountsUIWrapper} from './AccountsUIWrapper';
-
+//import {AccountsUIWrapper} from './AccountsUIWrapper';
+import { Accounts } from 'meteor/std:accounts-ui';
+//import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
 import { Well, ButtonToolbar, Button, DropdownButton, MenuItem, Grid,
     Row, Col, Thumbnail, Form, FormGroup, FormControl, ControlLabel, Carousel, Gluphikon } from "react-bootstrap";
 import MapComponent from '../component/MapComponent'
 
+Accounts.ui.config({
+    passwordSignupFields: 'EMAIL_ONLY',
+    loginPath: '/',
+    // onSignedInHook: () => FlowRouter.go('/'),
+    // onSignedOutHook: () => FlowRouter.go('/')
+});
+
+Accounts.ui.config({
+    passwordSignupFields: 'EMAIL_ONLY',
+    loginPath: '/',
+});
 
 class LandingPage extends React.Component {
 
     constructor(props) {
         super(props);
 
-        //console.dir(props.data);
+        this.state = {
+            dropdown: ''
+        };
+
+        this.dropdownShow = this.dropdownShow.bind(this);
+       // this.dropdownHide = this.dropdownHide.bind(this);
     }
+
+    dropdownShow() {
+        if (!this.state.dropdown) {
+            this.setState({dropdown: 'show'});
+        } else {
+            this.setState({dropdown: ''});
+        }
+    }
+
+    // dropdownHide() {
+    //     this.setState({dropdown: ''});
+    // }
 
     render() {
         return (
@@ -44,12 +73,23 @@ class LandingPage extends React.Component {
 
                                             <li className="menu-item">
 
-                                                <DropdownButton id="bg-nested-dropdown" className="fa fa-bars"
-                                                                aria-hidden="true">
-                                                              
-                                                    <MenuItem eventKey="1">Dropdown link</MenuItem>
-                                                    <MenuItem eventKey="2">Dropdown link</MenuItem>
-                                                </DropdownButton>
+                                                <Button
+                                                    id="bg-nested-dropdown"
+                                                    className="fa fa-bars"
+                                                    aria-hidden="true"
+                                                    title=""
+                                                    onClick={this.dropdownShow} />
+                                                <div className={this.state.dropdown}>
+                                                    <Accounts.ui.LoginForm />
+                                                </div>
+                                                {/*<Accounts.ui.LoginForm />*/}
+                                                {/*<AccountsUIWrapper/>*/}
+                                                {/*<DropdownButton id="bg-nested-dropdown" className="fa fa-bars"*/}
+                                                                {/*aria-hidden="true" title="">*/}
+                                                    {/*<Accounts.ui.LoginForm />*/}
+                                                    {/*<MenuItem header eventKey="1"><Accounts.ui.LoginForm /></MenuItem>*/}
+                                                    {/*<MenuItem eventKey="2">Dropdown link</MenuItem>*/}
+                                                {/*</DropdownButton>*/}
                                             </li>
                                         </ul>
                                     </nav>
