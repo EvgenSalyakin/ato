@@ -10,9 +10,9 @@ import MapComponent from '../component/MapComponent'
 
 Accounts.ui.config({
     passwordSignupFields: 'USERNAME_AND_EMAIL',
-    loginPath: '/',
-    sendResetPasswordEmail: false,
-    sendVerificationEmail: false,
+    loginPath: '/'
+    // sendResetPasswordEmail: false,
+    // sendVerificationEmail: false,
     // onSignedInHook: () => FlowRouter.go('/'),
     // onSignedOutHook: () => FlowRouter.go('/')
 });
