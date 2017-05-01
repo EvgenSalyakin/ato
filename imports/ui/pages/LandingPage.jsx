@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import {Tracker} from 'meteor/tracker';
 import {compose} from 'react-komposer';
 //import {AccountsUIWrapper} from './AccountsUIWrapper';
-import { Accounts } from 'meteor/std:accounts-ui';
+//import { Accounts } from 'meteor/std:accounts-ui';
 //import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
 import { Well, ButtonToolbar, Button, DropdownButton, MenuItem, Grid,
     Row, Col, Thumbnail, Form, FormGroup, FormControl, ControlLabel, Carousel, Gluphikon } from "react-bootstrap";
 import MapComponent from '../component/MapComponent'
 
-Accounts.ui.config({
-    passwordSignupFields: 'USERNAME_AND_EMAIL',
-    loginPath: '/'
-    // sendResetPasswordEmail: false,
-    // sendVerificationEmail: false,
-    // onSignedInHook: () => FlowRouter.go('/'),
-    // onSignedOutHook: () => FlowRouter.go('/')
-});
+// Accounts.ui.config({
+//     passwordSignupFields: 'USERNAME_AND_EMAIL',
+//     loginPath: '/'
+//     // sendResetPasswordEmail: false,
+//     // sendVerificationEmail: false,
+//     // onSignedInHook: () => FlowRouter.go('/'),
+//     // onSignedOutHook: () => FlowRouter.go('/')
+// });
 
 class LandingPage extends React.Component {
 
