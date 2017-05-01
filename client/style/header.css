@@ -128,35 +128,52 @@ header .social-card-section {
 
 /* header dropDown menu style */
 
-header .dropdown button {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: #000000;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-}
+/*header .dropdown button {*/
+    /*display: inline-block;*/
+    /*width: 30px;*/
+    /*height: 30px;*/
+    /*border-radius: 50%;*/
+    /*background-color: #ffffff;*/
+    /*color: #000000;*/
+    /*line-height: 30px;*/
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    /*transition: all 0.3s ease;*/
+    /*border: none;*/
+/*}*/
 
-header .dropdown button:hover {
-    opacity: 0.8;
-}
+/*header .dropdown button:hover {*/
+    /*opacity: 0.8;*/
+/*}*/
 
-header .dropdown .btn::before {
+/*header .dropdown .btn::before {*/
+    /*position: absolute;*/
+    /*top: 1px;*/
+    /*left: 9px;*/
+/*}*/
+
+/*header .dropdown .dropdown-menu {*/
+    /*left: -125px;*/
+    /*top: 150%;*/
+/*}*/
+
+/*header .dropdown .caret {*/
+    /*display: none;*/
+/*}*/
+
+
+header .menu-item div {
+    height: 0;
+    overflow: hidden;
     position: absolute;
-    top: 1px;
-    left: 9px;
+    z-index: 5000;
+    box-sizing: border-box;
+    top: 100px;
+    right: 0;
+    width: 300px;
+    transition: height 0.4s;
 }
 
-header .dropdown .dropdown-menu {
-    left: -125px;
-    top: 150%;
-}
-
-header .dropdown .caret {
-    display: none;
+header .menu-item .show {
+    height: 162px;
 }

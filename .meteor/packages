@@ -31,3 +31,4 @@ google-config-ui@1.0.0
 fortawesome:fontawesome     #Fontawesome icon
 reywood:publish-composite
 accounts-ui@1.1.9
+std:accounts-bootstrap
