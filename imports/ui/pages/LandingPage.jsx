@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
 import {Tracker} from 'meteor/tracker';
 import {compose} from 'react-komposer';
-//import {AccountsUIWrapper} from './AccountsUIWrapper';
-//import { Accounts } from 'meteor/std:accounts-ui';
-//import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
+import {FlowRouter} from 'meteor/kadira:flow-router';
 import { Well, ButtonToolbar, Button, DropdownButton, MenuItem, Grid,
     Row, Col, Thumbnail, Form, FormGroup, FormControl, ControlLabel, Carousel, Gluphikon } from "react-bootstrap";
 import MapComponent from '../component/MapComponent'
-
-// Accounts.ui.config({
-//     passwordSignupFields: 'USERNAME_AND_EMAIL',
-//     loginPath: '/'
-//     // sendResetPasswordEmail: false,
-//     // sendVerificationEmail: false,
-//     // onSignedInHook: () => FlowRouter.go('/'),
-//     // onSignedOutHook: () => FlowRouter.go('/')
-// });
 
 class LandingPage extends React.Component {
 
     constructor(props) {
         super(props);
 
+        let user = Meteor.user();
+
+        let userName = '';
+        if (user && user.profile) userName= user.profile.firstName+' '+user.profile.lastName;
+
         this.state = {
-            dropdown: 'hide'
+            dropdown: 'hide',
+            user,
+            userName
         };
 
         this.dropdownShow = this.dropdownShow.bind(this);
-       // this.dropdownHide = this.dropdownHide.bind(this);
+        this.onSignedIn = this.onSignedIn.bind(this);
+        this.onSignedOut = this.onSignedOut.bind(this);
+        this.adminPage = this.adminPage.bind(this);
     }
 
     dropdownShow() {
@@ -38,9 +36,43 @@ class LandingPage extends React.Component {
         }
     }
 
-    // dropdownHide() {
-    //     this.setState({dropdown: ''});
-    // }
+    onSignedIn() {
+        let user = Meteor.user();
+        if (user) {
+            this.setState({
+                user,
+                userName: user.profile.firstName+' '+user.profile.lastName,
+                dropdown: 'hide'
+            })
+        } else {
+            this.setState({
+                user: {},
+                userName: '',
+                dropdown: 'hide'
+            })
+        }
+    }
+
+    onSignedOut() {
+        this.setState({
+            user: {},
+            userName: '',
+            dropdown: 'hide'
+        })
+    }
+
+    adminPage() {
+        let { user } = this.state;
+        if (user) {
+            if (user.profile) {
+                if (user.profile.role.includes('admin')) {
+                    FlowRouter.go(FlowRouter.path('/admin'));
+                } else {
+                    FlowRouter.go(FlowRouter.path('/card'));
+                }
+            }
+        }
+    }
 
     render() {
         return (
@@ -62,14 +94,14 @@ class LandingPage extends React.Component {
 
                                                 </a>
                                             </li>
-                                            <li className="menu-item profile">
-                                                <a href="#" className="profile-face">
+                                            <li className="menu-item profile" onClick={this.adminPage}>
+                                                <a href="javascript:void(0)" className="profile-face" >
                                                     <img src="/img/profile-face.png" alt="avatar"/>
+                                                    <span>{this.state.userName}</span>
                                                 </a>
                                             </li>
 
                                             <li className="menu-item">
-
                                                 <Button
                                                     id="bg-nested-dropdown"
                                                     className="fa fa-bars"
@@ -77,16 +109,10 @@ class LandingPage extends React.Component {
                                                     title=""
                                                     onClick={this.dropdownShow} />
                                                 <div className={this.state.dropdown}>
-                                                    <Accounts.ui.LoginForm />
+                                                    <Accounts.ui.LoginForm
+                                                        onSignedInHook={this.onSignedIn}
+                                                        onSignedOutHook={this.onSignedOut} />
                                                 </div>
-                                                {/*<Accounts.ui.LoginForm />*/}
-                                                {/*<AccountsUIWrapper/>*/}
-                                                {/*<DropdownButton id="bg-nested-dropdown" className="fa fa-bars"*/}
-                                                                {/*aria-hidden="true" title="">*/}
-                                                    {/*<Accounts.ui.LoginForm />*/}
-                                                    {/*<MenuItem header eventKey="1"><Accounts.ui.LoginForm /></MenuItem>*/}
-                                                    {/*<MenuItem eventKey="2">Dropdown link</MenuItem>*/}
-                                                {/*</DropdownButton>*/}
                                             </li>
                                         </ul>
                                     </nav>
@@ -368,8 +394,6 @@ function getTrackerLoader(reactiveMapper) {
 
 function reactiveMapper(props, onData) {
 
-    // let data = {};
-    // onData(null, {data});
     Meteor.call('getLocationsFromJSON', (err, data) => {
         if (err) {
             throw new Meteor.Error('error');

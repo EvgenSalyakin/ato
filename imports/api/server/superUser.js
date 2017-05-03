@@ -10,12 +10,12 @@ Meteor.startup(() => {
                 console.log('Created super user');
                 Accounts.createUser({
                     username: 'admin',
-                    email: 'admin',
+                    email: 'admin@admin',
                     password: 'atoadmin',
                     profile: {
-                        name: 'Admin',
                         firstName: 'Admin',
-                        role: 'admin'
+                        lastName: '',
+                        role: ['admin']
                     }
                 });
             }
