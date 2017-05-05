@@ -172,12 +172,11 @@ export class OutletsAdminPage extends React.Component {
         return (
             <div className="page outlets">
                 <header>
-                    <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Outlets</h2>
+                    <h2><i className="fa fa-bullseye" aria-hidden="true"> </i> Outlets</h2>
                 </header>
                 <Well>
                     <Button
                         bsStyle="primary"
-                        bsSize="large"
                         onClick={this.open.bind(this)}
                     >
                         Add outlet

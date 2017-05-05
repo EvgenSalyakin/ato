@@ -6,7 +6,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className="wrapper">
+            <div className="wrapper admin">
                 <Header/>
                 <Aside />
                 <div className="app">

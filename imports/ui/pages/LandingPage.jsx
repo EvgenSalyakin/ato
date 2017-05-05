@@ -121,7 +121,7 @@ class LandingPage extends React.Component {
                             <div className="social-card-section">
                                 <Row>
                                     <Col xs={12} md={7}>
-                                        <h1>
+                                        <h1 id="hover">
                                             Соціальна картка<br />
                                             учасника<br />
                                             АТО
