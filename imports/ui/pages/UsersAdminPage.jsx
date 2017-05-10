@@ -187,7 +187,7 @@ export class UsersAdminPage extends React.Component {
         return (
             <div className="page admin">
                 <header>
-                    <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Users</h2>
+                    <h2><i className="fa fa-users" aria-hidden="true"> </i> Users</h2>
                 </header>
                 <Well>
                     <Button bsStyle="primary" onClick={this.open} >Create user</Button>

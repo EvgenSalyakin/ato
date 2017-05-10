@@ -17,6 +17,56 @@ header h1 {
     line-height: 98px;
 }
 
+h1#hover {
+    text-rendering: optimizeLegibility;
+}
+
+h1#hover::before {
+    content:"";
+    width: 80%;
+    height: 750px;
+    position: absolute;
+    top: -200px;
+    left: 10px;
+    transform: rotate(55deg);
+    background: rgba(206,188,155,.7);
+    background: -moz-linear-gradient(left, rgba(206,188,155,.7) 0%, rgba(42,31,25,0) 65%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(206,188,155,.7)), color-stop(65%, rgba(42,31,25,0)));
+    background: -webkit-linear-gradient(left, rgba(206,188,155,.7) 0%, rgba(42,31,25,0) 65%);
+    background: -o-linear-gradient(left, rgba(206,188,155,.7) 0%, rgba(42,31,25,0) 65%);
+    background: -ms-linear-gradient(left, rgba(206,188,155,.7) 0%, rgba(42,31,25,0) 65%);
+    background: linear-gradient(to right, rgba(206,188,155,.7) 0%, rgba(42,31,25,0) 65%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cebc9b', endColorstr='#2a1f19', GradientType=0.7 ));
+}
+
+#hover {
+    margin-left: 20px;
+    font-size: 45px;
+    color: #ffffff;
+    letter-spacing: .15em;
+    text-shadow:
+            -1px -1px 1px #efede3,
+            0px 1px 0 #2e2e2e,
+            0px 2px 0 #2c2c2c,
+            0px 3px 0 #2a2a2a,
+            0px 4px 0 #282828,
+            0px 5px 0 #262626,
+            0px 6px 0 #242424,
+            0px 7px 0 #222,
+            0px 8px 0 #202020,
+            0px 9px 0 #1e1e1e,
+            0px 10px 0 #1c1c1c,
+            0px 11px 0 #1a1a1a,
+            0px 12px 0 #181818,
+            0px 13px 0 #161616,
+            0px 14px 0 #141414,
+            0px 15px 0 #121212,
+            2px 20px 5px rgba(0, 0, 0, 0.9),
+            5px 23px 5px rgba(0, 0, 0, 0.3),
+            8px 27px 8px rgba(0, 0, 0, 0.5),
+            8px 28px 35px rgba(0, 0, 0, 0.9);
+}
+
 header .menu-section .menu-wrap {
     float: right;
 }
@@ -94,6 +144,41 @@ header .social-card-section {
     float: left;
 }
 
+.link-item a.fa-facebook:hover {
+    box-shadow: 0 0 0 0 #e7e7e7, 0 0 0 0 rgba(90, 153, 212, 0.7);
+    background: #3a5795;
+}
+
+.link-item a.fa-google-plus:hover {
+    box-shadow: 0 0 0 0 #e7e7e7, 0 0 0 0 rgba(221, 75, 57, 0.65);
+    background: #dd4b39;
+}
+
+.link-item a.fa-vk:hover {
+    box-shadow: 0 0 0 0 #e7e7e7, 0 0 0 0 rgba(14, 118, 168, 0.69);
+    background: #0e76a8;
+}
+
+.link-item a:hover {
+    animation: pulse 1.5s cubic-bezier(0.55, 0.32, 0, 1.17) infinite;
+    cursor: pointer;
+}
+@-moz-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 10px transparent, 0 0 0 32px rgba(238, 238, 238, 0.2);
+    }
+}
+@-webkit-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 10px transparent, 0 0 0 32px rgba(238, 238, 238, 0.2);
+    }
+}
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 10px transparent, 0 0 0 32px rgba(238, 238, 238, 0.2);
+    }
+}
+
 .social-links-section .links-wrapper {
     display: block;
     margin: 0 auto;
@@ -120,10 +205,6 @@ header .social-card-section {
     line-height: 35px;
     font-size: 22px;
     transition: all 0.3s ease;
-}
-
-.social-links-section .link-item a:hover {
-    opacity: 0.8;
 }
 
 /* header dropDown menu style */

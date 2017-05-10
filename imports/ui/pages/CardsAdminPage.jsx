@@ -117,11 +117,11 @@ class CardsAdminPage extends React.Component {
         return (
             <div className="page admin">
                 <header>
-                    <h2><i className="fa fa-building-o" aria-hidden="true"> </i> Admin</h2>
+                    <h2><i className="fa fa-id-card" aria-hidden="true"> </i> Cards</h2>
                 </header>
                 <Well>
                     <Button bsStyle="primary" onClick={this.open} >Create card</Button>
-                </Well>
+
                     <div
                         style={{height:  '640px'}}
                         className="ag-material">
@@ -138,6 +138,8 @@ class CardsAdminPage extends React.Component {
                             rowHeight={this.rowHeight}
                         />
                     </div>
+                </Well>
+
 
                 <Modal show={this.state.showModal} onHide={this.close}>
                     <Modal.Header closeButton>

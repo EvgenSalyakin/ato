@@ -1,0 +1,28 @@
+.admin .wrap {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 250px;
+    color: #333;
+    text-align: right;
+    background: transparent;
+}
+
+.admin header {
+    background: transparent;
+    color: #333;
+    padding: 0;
+}
+
+.admin .well {
+    height: calc(100vh - 70px);
+}
+
+.admin .ag-material {
+    height: calc(100% - 30px) !important;
+}
+
+.admin .ag-material .ag-bl-full-height {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

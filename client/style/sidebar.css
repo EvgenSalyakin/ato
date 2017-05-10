@@ -5,39 +5,18 @@
 .sidebar-container {
     height: auto;
     position: fixed;
-    top: 18px;
+    top: 0px;
     left: 0;
     bottom: 0;
     z-index: 1010;
     width: 165px;
     box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
-    border-top-right-radius: 30%;
-    /*border-top: 2px dotted #6dcec1;*/
-    border-right: 3px dotted #6dcec1;
-    background: #156f63;
-    background: -webkit-repeating-linear-gradient(
-            40deg, rgba(5, 78, 69, 0.8),
-            rgba(22, 99, 89, 0.9) 3px,
-            #0b6156 5px,
-            rgba(4, 86, 75, 0.7) 5px );
-    /* Opera 11.1 to 12.0 */
-    background: -o-repeating-linear-gradient(
-            40deg, rgba(5, 78, 69, 0.8),
-            rgba(22, 99, 89, 0.9) 3px,
-            #0b6156 5px,
-            rgba(4, 86, 75, 0.7) 5px );
-    /* Firefox 3.6 to 15 */
-    background: -moz-repeating-linear-gradient(
-            40deg, rgba(5, 78, 69, 0.8),
-            rgba(22, 99, 89, 0.9) 3px,
-            #0b6156 5px,
-            rgba(4, 86, 75, 0.7) 5px );
-    /* Standard syntax */
-    background: repeating-linear-gradient(
-            40deg, rgba(5, 78, 69, 0.8),
-            rgba(22, 99, 89, 0.9) 3px,
-            #0b6156 5px,
-            rgba(4, 86, 75, 0.7) 5px );
+    border-right: 3px dotted #233c39;
+    background: #10554c;
+    background: -webkit-repeating-linear-gradient( 40deg, rgba(8, 52, 47, 0.8), rgba(22, 29, 28, 0.9) 3px, #0b413a 5px, rgba(11, 28, 25, 0.7) 5px );
+    background: -o-repeating-linear-gradient( 40deg, rgba(8, 52, 47, 0.8), rgba(22, 29, 28, 0.9) 3px, #0b413a 5px, rgba(11, 28, 25, 0.7) 5px );
+    background: -moz-repeating-linear-gradient( 40deg, rgba(8, 52, 47, 0.8), rgba(22, 29, 28, 0.9) 3px, #0b413a 5px, rgba(11, 28, 25, 0.7) 5px );
+    background: repeating-linear-gradient( 40deg, rgba(8, 52, 47, 0.8), rgba(22, 29, 28, 0.9) 3px, #0b413a 5px, rgba(11, 28, 25, 0.7) 5px );
 }
 
 aside {
