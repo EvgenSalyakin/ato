@@ -8,16 +8,13 @@ export default class Aside extends Component {
                 <aside className="panel1 nav">
                     <ul className="navigation">
                         <li>
-                            <a href="/admin">Admin Page</a>
+                            <a href="/admin-users">Users</a>
                         </li>
                         <li>
                             <a href="/admin-cards">Cards</a>
                         </li>
                         <li>
                             <a href="/admin-outlets">Outlets</a>
-                        </li>
-                        <li>
-                            <a href="/admin-users">Users</a>
                         </li>
                         <li>
                             <a href="#">Logout</a>
